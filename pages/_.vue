@@ -8,21 +8,23 @@
     <Navbar />
     <div>
       <template v-for="(componentDefinition, index) in page.components">
-        <component :is="resolveComponent(componentDefinition)" :key="index" v-bind="componentDefinition" />
+        <!-- <pre> {{ componentDefinition }}</pre> -->
+        <component
+          :is="resolveComponent(componentDefinition)"
+          :key="index"
+          v-bind="componentDefinition"
+        />
       </template>
     </div>
-    <Footer />
   </div>
 </template>
 
 <script>
-import Navbar from '../components/Navbar/Navbar';
-import Footer from '../components/Footer';
+import Navbar from "../components/Navbar/Navbar";
 
 export default {
   components: {
     Navbar,
-    Footer,
   },
   asyncData(nuxtContext) {
     // eslint-disable-next-line no-unused-vars
@@ -30,7 +32,7 @@ export default {
 
     return Promise.all([
       $contentful.getPageBySlug($preview, route.path),
-      $contentful.getEntriesByContentType($preview, 'talk'),
+      $contentful.getEntriesByContentType($preview, "talk"),
     ]).then((results) => {
       const page = results[0];
       const talks = results[1];
@@ -65,7 +67,13 @@ export default {
   head() {
     return {
       title: `${this.page.title} | UniformConf`,
-      meta: [{ hid: 'og:title', name: 'og:title', content: `${this.page.title} | UniformConf` }],
+      meta: [
+        {
+          hid: "og:title",
+          name: "og:title",
+          content: `${this.page.title} | UniformConf`,
+        },
+      ],
     };
   },
   provide() {

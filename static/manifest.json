@@ -1,8 +1,8 @@
 {
-  "name": "UniformConf",
-  "short_name": "UniformConf",
-  "theme_color": "#1d3557",
-  "background_color": "#ffffff",
+  "name": "Teachernator",
+  "short_name": "Teachernator",
+  "theme_color": "#415ac2",
+  "background_color": "#f6f4f1",
   "display": "browser",
   "scope": "/",
   "start_url": "/"
