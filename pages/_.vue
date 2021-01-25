@@ -6,25 +6,28 @@
 <template>
   <div>
     <Navbar />
-    <div>
-      <template v-for="(componentDefinition, index) in page.components">
-        <!-- <pre> {{ componentDefinition }}</pre> -->
-        <component
-          :is="resolveComponent(componentDefinition)"
-          :key="index"
-          v-bind="componentDefinition"
-        />
-      </template>
-    </div>
+
+    <Introduction />
+
+    <template v-for="(componentDefinition, index) in page.components">
+      <!-- <pre> {{ componentDefinition }}</pre> -->
+      <component
+        :is="resolveComponent(componentDefinition)"
+        :key="index"
+        v-bind="componentDefinition"
+      />
+    </template>
   </div>
 </template>
 
 <script>
 import Navbar from "../components/Navbar/Navbar";
+import Introduction from "../components/Introduction";
 
 export default {
   components: {
     Navbar,
+    Introduction,
   },
   asyncData(nuxtContext) {
     // eslint-disable-next-line no-unused-vars
