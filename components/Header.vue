@@ -4,13 +4,15 @@
       class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-8"
     >
       <div class="flex flex-col">
-        <img
-          src="/images/header-left.png"
-          width="182px"
-          class="relative"
-          style="left: -8px"
-        />
-        <div class="font-sans text-accent font-bold tracking-wider mt-1">
+        <div class="hi flex">
+          <span class="font-sans font-bold hi-word">Hi</span>
+          <span class="hi-sep"></span>
+          <span class="hi-copy font-sans font-bold"
+            >BOOK SECTION <br />
+            NO. 14</span
+          >
+        </div>
+        <div class="font-sans text-accent font-bold tracking-wider">
           <span class="arrow">&crarr;</span> Section Overview
         </div>
       </div>
@@ -35,21 +37,30 @@
   top: 0.25em;
 }
 
-.cta {
-  @apply bg-bg
-    text-dark
-    px-4
-    py-2
-    rounded-3xl
-    font-sans
-    font-semibold
-    tracking-wider
-    border-dark
-    border-2
-    ml-4;
+.hi {
+  position: relative;
+  left: -1px;
 }
 
-.cta-active {
-  @apply bg-accent border-accent text-white px-4 py-2 rounded-3xl font-sans font-medium tracking-wider;
+.hi .hi-word {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.hi .hi-sep {
+  width: 1.6rem;
+  height: 1.6rem;
+  border-left: 1px solid #282828;
+  transform: skew(-34deg);
+  position: relative;
+  top: 8px;
+  left: 11px;
+  margin: 0 10px 0 5px;
+}
+
+.hi .hi-copy {
+  line-height: 1;
+  font-size: 14px;
+  margin: 5px 0 0 0;
 }
 </style>

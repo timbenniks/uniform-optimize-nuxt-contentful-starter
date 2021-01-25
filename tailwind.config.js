@@ -23,6 +23,7 @@ module.exports = {
       dark: "#282828",
       accent: "#415ac2",
       white: "#ffffff",
+      grey: "#e1dad0",
     },
     extend: {
       minHeight: {

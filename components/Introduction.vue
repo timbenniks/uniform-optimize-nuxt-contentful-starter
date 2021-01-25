@@ -1,5 +1,5 @@
 <template>
-  <section class="w-full relative">
+  <section class="w-full relative mb-24">
     <h1 class="text-center font-bold">Introduction</h1>
     <div class="hero relative w-full">
       <img
@@ -37,7 +37,18 @@ h1 {
 }
 
 .intro-arrow {
+  animation: MoveUpDown 1s ease infinite;
   bottom: 3rem;
   left: calc(50% - 27px);
+}
+
+@keyframes MoveUpDown {
+  0%,
+  100% {
+    bottom: 4rem;
+  }
+  50% {
+    bottom: 3rem;
+  }
 }
 </style>

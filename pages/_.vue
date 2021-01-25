@@ -5,9 +5,10 @@
 
 <template>
   <div>
-    <Navbar />
+    <Header />
 
     <Introduction />
+    <RichText />
 
     <template v-for="(componentDefinition, index) in page.components">
       <!-- <pre> {{ componentDefinition }}</pre> -->
@@ -21,13 +22,15 @@
 </template>
 
 <script>
-import Navbar from "../components/Navbar/Navbar";
+import Header from "../components/Header";
 import Introduction from "../components/Introduction";
+import RichText from "../components/RichText";
 
 export default {
   components: {
-    Navbar,
+    Header,
     Introduction,
+    RichText,
   },
   asyncData(nuxtContext) {
     // eslint-disable-next-line no-unused-vars
@@ -69,12 +72,12 @@ export default {
   },
   head() {
     return {
-      title: `${this.page.title} | UniformConf`,
+      title: `${this.page.title}`,
       meta: [
         {
           hid: "og:title",
           name: "og:title",
-          content: `${this.page.title} | UniformConf`,
+          content: `${this.page.title}`,
         },
       ],
     };
