@@ -9,6 +9,7 @@
 
     <Introduction />
     <RichText />
+    <Carousel />
 
     <template v-for="(componentDefinition, index) in page.components">
       <!-- <pre> {{ componentDefinition }}</pre> -->
@@ -25,12 +26,14 @@
 import Header from "../components/Header";
 import Introduction from "../components/Introduction";
 import RichText from "../components/RichText";
+import Carousel from "../components/Carousel";
 
 export default {
   components: {
     Header,
     Introduction,
     RichText,
+    Carousel,
   },
   asyncData(nuxtContext) {
     // eslint-disable-next-line no-unused-vars

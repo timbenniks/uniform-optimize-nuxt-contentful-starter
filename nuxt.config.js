@@ -1,8 +1,9 @@
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   // default to `server` unless the `NUXT_BUILD_TARGET` var has been defined.
-  target: process.env.NUXT_BUILD_TARGET || "server",
-
+  //target: process.env.NUXT_BUILD_TARGET || "server",
+  target: "static",
+  ssr: false,
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: "Teachernator",
