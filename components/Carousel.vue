@@ -1,5 +1,5 @@
 <template>
-  <section class="carousel-wrapper w-full grid gap-4 grid-cols-2">
+  <section class="carousel-wrapper w-full grid gap-4 grid-cols-2 mb-24">
     <div class="flex justify-end">
       <svg width="38" height="38" viewBox="0 0 38 38" class="mt-16">
         <g transform="translate(-202 -1085) translate(202 1085)">

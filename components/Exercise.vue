@@ -1,20 +1,22 @@
 <template>
-  <section class="richtext-wrapper w-full grid gap-4 grid-cols-2 mb-24">
+  <section class="exercise-wrapper w-full grid gap-4 grid-cols-2 mb-24">
     <div class="flex justify-end">
       <svg width="38" height="38" viewBox="0 0 38 38">
-        <g transform="translate(-202 -349) translate(202 349)">
-          <circle cx="19" cy="19" r="19" fill="#282828" />
+        <g transform="translate(-202 -2255) translate(202 2255)">
+          <circle cx="19" cy="19" r="19" fill="#000" />
           <path
             fill="#F6F4F1"
             fill-rule="nonzero"
-            d="M21 24H11v2h10v-2zm6-8H11v2h16v-2zm-16 6h16v-2H11v2zm0-10v2h16v-2H11z"
+            d="M23.795 18.652c-1.145 0-2.93.325-4.295.957-1.365-.641-3.15-.957-4.295-.957-2.072 0-6.205 1.033-6.205 3.109v2.63h21v-2.63c0-2.076-4.133-3.109-6.205-3.109zm-3.765 4.464h-9.545v-1.24c0-.536 2.443-1.736 4.773-1.736 2.329 0 4.772 1.2 4.772 1.736v1.24zm8.485 0h-7.141v-1.24c0-.456-.19-.853-.495-1.21.838-.298 1.866-.526 2.875-.526 2.324 0 4.761 1.2 4.761 1.736v1.24zm-13.363-5.314c1.871 0 3.393-1.526 3.393-3.401 0-1.875-1.522-3.401-3.393-3.401-1.872 0-3.394 1.526-3.394 3.401 0 1.875 1.522 3.4 3.394 3.4zm0-5.314c1.05 0 1.909.86 1.909 1.913 0 1.052-.86 1.913-1.91 1.913-1.05 0-1.909-.86-1.909-1.913 0-1.052.86-1.913 1.91-1.913zm8.696 5.314c1.872 0 3.394-1.526 3.394-3.401 0-1.875-1.522-3.401-3.394-3.401-1.871 0-3.393 1.526-3.393 3.401 0 1.875 1.522 3.4 3.393 3.4zm0-5.314c1.05 0 1.91.86 1.91 1.913 0 1.052-.86 1.913-1.91 1.913-1.05 0-1.909-.86-1.909-1.913 0-1.052.86-1.913 1.91-1.913z"
           />
         </g>
       </svg>
     </div>
     <div class="content-wrapper">
       <div class="title-box mb-8 flex justify-between">
-        <h2 class="font-bold text-4xl max-w-2xl">The German Unity</h2>
+        <h2 class="font-bold text-4xl max-w-2xl">
+          The dissolution of the GDR in the mirror of caricatures
+        </h2>
 
         <ul class="flex">
           <li>
@@ -66,49 +68,71 @@
           </li>
         </ul>
       </div>
-      <h3 class="font-sans font-bold uppercase mb-2">1989 - 1990</h3>
-      <article class="body-content-wrapper">
-        <p>
-          The years 1989 and 1990 are among the most eventful years in recent
-          history. Historians and historians have therefore called 1989 a year
-          of age. From a German point of view, it immediately illustrates that
-          the years of 1989/90 were.epochal: on 3 October 1990, the German
-          division ended over 40 years. But there have also been significant
-          changes in the world in 1989/90, for example.
+
+      <ul class="tiles mt-16 w-full grid gap-2 grid-cols-2">
+        <li class="tile mb-4">
+          <img
+            class="mb-6"
+            src="https://i.twic.pics/v1/cover=1:1/resize=478x359/placeholder:282828"
+          />
+          <p class="text-sm">
+            <strong>"40 years of GDR"</strong><br />caricature of Fritz
+            Behrendt, 1989
+          </p>
+        </li>
+        <li class="tile mb-4">
+          <img
+            class="mb-6"
+            src="https://i.twic.pics/v1/cover=1:1/resize=478x359/placeholder:282828"
+          />
+          <p class="text-sm">
+            <strong
+              >"Socialism in its course stops neither ox nor donkey."</strong
+            ><br />Caricature of Horst Haitzinger using a quote from Erich
+            Honecker, August 1989
+          </p>
+        </li>
+      </ul>
+
+      <article>
+        <h3 class="font-sans font-bold mb-2">Task</h3>
+        <p class="font-sans font-bold mb-2">
+          <strong
+            >1. The dissolution of the GDR in the mirror of caricatures</strong
+          >
         </p>
-        <p>
-          For example, in China (the end of the apartheid system) and Latin
-          America (US-embracing solution). From itself, the wall was more than a
-          symbol of the division of Germany, it was the symbol of Europe and the
-          world. Your case therefore also represents the end of the division of
-          Europe and the end of the Cold War in the world. Histori people speak
-          with a view to this short 20th century date that ended in 1989/90.
-          They thus refer to the events of 1917 in 1917, marking the end of the
-          19th century and the beginning of the "short" twentieth century: 1917,
-          the US war began and the October Revolution in Russia, began to divide
-          the world into two camps (bipolarity).
-        </p>
-        <p>
-          This was covered up until 1947 by the joint struggle of the two
-          opposite world powers against Nazi Germany, so the fall of the wall
-          marks the end of bipolarity and the start of a multipolar order. At
-          the same time, the wall is the beginning of an undivided, unified
-          Europe. Finally, for Germany, the event is also the beginning of a new
-          internal self-understanding and a new role in the world.
-        </p>
+        <ol>
+          <li>Describe the caricatures.</li>
+          <li>
+            Explain the historical context to which the caricature refers to.
+          </li>
+          <li>
+            Interpret the caricatures and explain the intention of the
+            cartoonist.
+          </li>
+        </ol>
       </article>
-      <hr class="mt-8 border-grey" />
+      <hr class="mt-8 border-grey mb-6" />
       <ul class="flex mt-4">
+        <li class="flex font-sans font-bold mr-10 -mt-2">
+          <nuxt-link to="#" class="cta cta-active">Start Session</nuxt-link>
+        </li>
         <li class="flex font-sans font-bold mr-6">
-          <svg width="18" height="19" viewBox="0 0 18 19" class="mr-3">
-            <g fill="#415AC2" fill-rule="nonzero">
-              <path
-                d="M9 0C4.03 0 0 4.03 0 9v7c0 1.66 1.34 3 3 3h3v-8H2V9c0-3.87 3.13-7 7-7s7 3.13 7 7v2h-4v8h3c1.66 0 3-1.34 3-3V9c0-4.97-4.03-9-9-9z"
-                transform="translate(-257 -864) translate(257 864)"
-              />
+          <svg width="24" height="25" viewBox="0 0 24 25" class="mr-2">
+            <g fill="none" fill-rule="evenodd">
+              <g transform="translate(-498 -3093) translate(498 3092)">
+                <g>
+                  <path
+                    fill="#282828"
+                    d="M12 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0 9c2.7 0 5.8 1.29 6 2v1H6v-.99c.2-.72 3.3-2.01 6-2.01m0-11C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z"
+                    transform="translate(0 1.745)"
+                  />
+                </g>
+              </g>
             </g>
           </svg>
-          Listen to article
+
+          4 - 6 group members
         </li>
         <li class="flex font-sans font-bold">
           <svg width="24" height="24" viewBox="0 0 24 24" class="mr-2">
@@ -131,7 +155,7 @@
             </g>
           </svg>
 
-          5 minutes
+          20 minute session
         </li>
       </ul>
     </div>
@@ -139,7 +163,7 @@
 </template>
 
 <style lang="postcss">
-.richtext-wrapper {
+.exercise-wrapper {
   grid-template-columns: 1fr 9fr;
 }
 
@@ -148,9 +172,8 @@
   line-height: 1;
 }
 
-.body-content-wrapper {
-  column-count: 2;
-  column-gap: 5em;
-  line-height: 27px;
+.content-wrapper ol {
+  list-style-type: upper-alpha;
+  list-style-position: inside;
 }
 </style>

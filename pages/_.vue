@@ -12,6 +12,8 @@
     <Carousel view="slides" />
     <Carousel view="tiles" />
 
+    <Exercise />
+
     <template v-for="(componentDefinition, index) in page.components">
       <!-- <pre> {{ componentDefinition }}</pre> -->
       <component
@@ -28,6 +30,7 @@ import Header from "../components/Header";
 import Introduction from "../components/Introduction";
 import RichText from "../components/RichText";
 import Carousel from "../components/Carousel";
+import Exercise from "../components/Exercise";
 
 export default {
   components: {
@@ -35,6 +38,7 @@ export default {
     Introduction,
     RichText,
     Carousel,
+    Exercise,
   },
   asyncData(nuxtContext) {
     // eslint-disable-next-line no-unused-vars
