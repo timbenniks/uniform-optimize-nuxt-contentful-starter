@@ -9,7 +9,8 @@
 
     <Introduction />
     <RichText />
-    <Carousel />
+    <Carousel view="slides" />
+    <Carousel view="tiles" />
 
     <template v-for="(componentDefinition, index) in page.components">
       <!-- <pre> {{ componentDefinition }}</pre> -->

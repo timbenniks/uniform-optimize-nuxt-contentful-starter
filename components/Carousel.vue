@@ -17,27 +17,130 @@
       </svg>
     </div>
 
-    <carousel-3d
-      :controls-visible="true"
-      :controls-prev-html="`<svg viewBox='0 0 57 57'><g transform='translate(-257 -1172) rotate(90 -429 743)'><circle cx='28.5' cy='28.5' r='28.5' fill='#415AC2'/><g fill='#FFF'><path transform='rotate(-90 28.5 11.5) matrix(-1 0 0 1 24 0)' d='m12 4-1.41 1.41 5.58 5.59h-12.17v2h12.17l-5.58 5.59 1.41 1.41 8-8z'/></g></g></svg>`"
-      :controls-next-html="`<svg viewBox='0 0 57 57'><g transform='translate(-1241 -1172) rotate(-90 1235 -6)'><circle cx='28.5' cy='28.5' r='28.5' fill='#415AC2'/><g fill='#ffffff'><path d='M12 4L10.59 5.41 16.17 11 4 11 4 13 16.17 13 10.59 18.59 12 20 20 12z' transform='rotate(-90 28.5 11.5) matrix(-1 0 0 1 24 0)'/></g></g></svg>`"
-      :controls-width="57"
-      :controls-height="57"
-      :clickable="false"
-      :perspective="0"
-      :space="450"
-      :display="3"
-      :loop="false"
-      :width="478"
-      :height="359"
-      :border="1"
-    >
-      <slide :index="0"><img src="https://placehold.it/478x359" /></slide>
-      <slide :index="1"><img src="https://placehold.it/478x359" /></slide>
-      <slide :index="2"><img src="https://placehold.it/478x359" /></slide>
-      <slide :index="3"><img src="https://placehold.it/478x359" /></slide>
-      <slide :index="4"><img src="https://placehold.it/478x359" /></slide>
-    </carousel-3d>
+    <div class="carousel-wrapper">
+      <template v-if="view === 'slides'">
+        <carousel-3d
+          :controls-visible="true"
+          :controls-prev-html="`<svg viewBox='0 0 57 57'><g transform='translate(-257 -1172) rotate(90 -429 743)'><circle cx='28.5' cy='28.5' r='28.5' fill='#415AC2'/><g fill='#FFF'><path transform='rotate(-90 28.5 11.5) matrix(-1 0 0 1 24 0)' d='m12 4-1.41 1.41 5.58 5.59h-12.17v2h12.17l-5.58 5.59 1.41 1.41 8-8z'/></g></g></svg>`"
+          :controls-next-html="`<svg viewBox='0 0 57 57'><g transform='translate(-1241 -1172) rotate(-90 1235 -6)'><circle cx='28.5' cy='28.5' r='28.5' fill='#415AC2'/><g fill='#ffffff'><path d='M12 4L10.59 5.41 16.17 11 4 11 4 13 16.17 13 10.59 18.59 12 20 20 12z' transform='rotate(-90 28.5 11.5) matrix(-1 0 0 1 24 0)'/></g></g></svg>`"
+          :controls-width="57"
+          :controls-height="57"
+          :clickable="false"
+          :perspective="0"
+          :space="450"
+          :display="3"
+          :loop="false"
+          :width="478"
+          :height="359"
+          :border="1"
+        >
+          <slide :index="0"
+            ><img
+              src="https://i.twic.pics/v1/cover=1:1/resize=478x359/placeholder:282828"
+          /></slide>
+          <slide :index="1"
+            ><img
+              src="https://i.twic.pics/v1/cover=1:1/resize=478x359/placeholder:282828"
+          /></slide>
+          <slide :index="2"
+            ><img
+              src="https://i.twic.pics/v1/cover=1:1/resize=478x359/placeholder:282828"
+          /></slide>
+          <slide :index="3"
+            ><img
+              src="https://i.twic.pics/v1/cover=1:1/resize=478x359/placeholder:282828"
+          /></slide>
+          <slide :index="4"
+            ><img
+              src="https://i.twic.pics/v1/cover=1:1/resize=478x359/placeholder:282828"
+          /></slide>
+        </carousel-3d>
+
+        <p class="text-center">Monday protests in Leipzig, 09.10.1989</p>
+      </template>
+
+      <template v-else>
+        <div class="tiles mt-16 w-full grid gap-2 grid-cols-2">
+          <div class="tile mb-4">
+            <img
+              src="https://i.twic.pics/v1/cover=1:1/resize=478x359/placeholder:282828"
+            />
+          </div>
+          <div class="tile mb-4">
+            <img
+              src="https://i.twic.pics/v1/cover=1:1/resize=478x359/placeholder:282828"
+            />
+          </div>
+          <div class="tile mb-4">
+            <img
+              src="https://i.twic.pics/v1/cover=1:1/resize=478x359/placeholder:282828"
+            />
+          </div>
+          <div class="tile mb-4">
+            <img
+              src="https://i.twic.pics/v1/cover=1:1/resize=478x359/placeholder:282828"
+            />
+          </div>
+          <div class="tile mb-4">
+            <img
+              src="https://i.twic.pics/v1/cover=1:1/resize=478x359/placeholder:282828"
+            />
+          </div>
+        </div>
+      </template>
+
+      <hr class="mt-12 border-grey" />
+      <ul class="flex mt-4">
+        <li class="flex font-sans font-bold mr-6 text-accent">
+          <svg width="24" height="24" viewBox="0 0 24 24" class="mr-2">
+            <g fill="none" fill-rule="evenodd">
+              <g transform="translate(-254 -1487) translate(254 1487)">
+                <g fill="#282828" fill-rule="nonzero">
+                  <path
+                    d="M23.76 4.31s-.234-1.646-.954-2.37C21.894.987 20.871.982 20.401.926 17.043.686 12.005.686 12.005.686h-.01s-5.038 0-8.397.241C3.13.983 2.107.987 1.194 1.94.474 2.664.24 4.31.24 4.31S0 6.243 0 8.176v1.812c0 1.933.24 3.866.24 3.866s.234 1.646.954 2.37c.913.952 2.112.922 2.646 1.022 1.92.183 8.16.24 8.16.24s5.043-.008 8.401-.25c.47-.055 1.493-.06 2.405-1.011.72-.725.954-2.371.954-2.371S24 11.92 24 9.988V8.176c0-1.933-.24-3.866-.24-3.866M9.522 12.184V5.473l6.484 3.367-6.484 3.344z"
+                    transform="translate(0 3)"
+                  />
+                </g>
+              </g>
+            </g>
+          </svg>
+
+          Watch on Youtube
+        </li>
+        <li class="flex font-sans font-bold mr-6">
+          <svg width="18" height="18" viewBox="0 0 18 18" class="mr-2 mt-1">
+            <g fill="none" fill-rule="evenodd">
+              <g transform="translate(-436 -1490) translate(437 1491)">
+                <path
+                  fill-rule="nonzero"
+                  stroke="#282828"
+                  stroke-width="2"
+                  d="M0 16L6 16 6 10 0 10zM10 16L16 16 16 10 10 10zM0 6L6 6 6 0 0 0zM10 0L10 6 16 6 16 0z"
+                />
+              </g>
+            </g>
+          </svg>
+
+          Tile View
+        </li>
+        <li class="flex font-sans font-bold">
+          <svg width="18" height="18" viewBox="0 0 18 18" class="mt-1 mr-2">
+            <g fill="none" fill-rule="evenodd">
+              <g transform="translate(-545 -1490) translate(546 1491)">
+                <path
+                  fill-rule="nonzero"
+                  stroke="#282828"
+                  stroke-width="2"
+                  d="M12 13L16 13 16 3 12 3zM0 13L4 13 4 3 0 3zM4 16L12 16 12 0 4 0z"
+                />
+              </g>
+            </g>
+          </svg>
+
+          Slide View
+        </li>
+      </ul>
+    </div>
   </section>
 </template>
 
@@ -55,6 +158,13 @@ export default {
   components: {
     Carousel3d,
     Slide,
+  },
+  props: {
+    view: {
+      type: String,
+      required: false,
+      default: "slides",
+    },
   },
 };
 </script>
