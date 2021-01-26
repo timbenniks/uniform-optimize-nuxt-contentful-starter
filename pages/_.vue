@@ -11,11 +11,12 @@
     <RichText />
     <Carousel view="slides" />
     <Carousel view="tiles" />
-
     <Exercise />
 
     <template v-for="(componentDefinition, index) in page.components">
-      <!-- <pre> {{ componentDefinition }}</pre> -->
+      <pre>
+        {{ componentDefinition }},
+      </pre>
       <component
         :is="resolveComponent(componentDefinition)"
         :key="index"
