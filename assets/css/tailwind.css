@@ -23,8 +23,12 @@ p {
     ml-4;
 }
 
+.cta:hover {
+  @apply bg-accent border-2 border-accent text-white px-4 py-2 rounded-3xl font-sans tracking-wider font-semibold;
+}
+
 .cta-active {
-  @apply bg-accent border-accent text-white px-4 py-2 rounded-3xl font-sans font-medium tracking-wider;
+  @apply bg-accent border-2 border-accent text-white px-4 py-2 rounded-3xl font-sans tracking-wider font-semibold;
 }
 
 @tailwind components;

@@ -99,9 +99,9 @@ export default {
   // when a querystring value changes via client-side route change,
   // e.g. clicking on a NuxtLink with a querystring value in the URL
   // Otherwise, Nuxt typically doesn't do anything when querystrings are appended.
-  watchQuery() {
+  watchQuery: true,
+  updated() {
     this.reevaluateSignals();
-    return true;
   },
 };
 </script>

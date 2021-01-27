@@ -1,10 +1,11 @@
 <template>
   <personalize :variations="variations">
-    <template v-slot:default="{ variations }">
+    <template v-slot:default="{ personalized, variations }">
       <section class="w-full relative mb-24">
         <h1 class="text-center font-bold">{{ variations[0].fields.title }}</h1>
 
         <template v-for="variation in variations">
+          <p>quick debug, personalized: {{ personalized }}</p>
           <pre>{{ variation.intentTag }}</pre>
         </template>
 

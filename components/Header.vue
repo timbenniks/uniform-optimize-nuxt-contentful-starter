@@ -8,8 +8,7 @@
           <span class="font-sans font-bold hi-word">Hi</span>
           <span class="hi-sep"></span>
           <span class="hi-copy font-sans font-bold"
-            >BOOK SECTION <br />
-            NO. 14</span
+            >BOOK SECTION<br />NO. 14</span
           >
         </div>
         <div class="font-sans text-accent font-bold tracking-wider">
@@ -17,11 +16,11 @@
         </div>
       </div>
       <div class="text-center font-bold text-lg">
-        The<br />German<br />Untity
+        The<br />German<br />Unity
       </div>
       <div class="">
-        <a href="?utm_type=student" class="cta cta-active">Student</a>
-        <a href="?utm_type=teacher" class="cta">Teacher</a>
+        <nuxt-link to="?utm_type=student" class="cta">Student</nuxt-link>
+        <nuxt-link to="?utm_type=teacher" class="cta">Teacher</nuxt-link>
       </div>
     </div>
   </nav>
