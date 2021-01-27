@@ -97,9 +97,9 @@
       <article>
         <h3 class="font-sans font-bold mb-2">Task</h3>
         <p class="font-sans font-bold mb-2">
-          <strong
-            >1. The dissolution of the GDR in the mirror of caricatures</strong
-          >
+          <strong>
+            1. The dissolution of the GDR in the mirror of caricatures
+          </strong>
         </p>
         <ol>
           <li>Describe the caricatures.</li>

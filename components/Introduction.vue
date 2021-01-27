@@ -6,7 +6,7 @@
 
         <template v-for="variation in variations">
           <p>quick debug, personalized: {{ personalized }}</p>
-          <pre>{{ variation.intentTag }}</pre>
+          <pre>{{ variation.intentTag.intents }}</pre>
         </template>
 
         <div class="hero relative w-full">

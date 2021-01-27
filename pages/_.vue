@@ -6,13 +6,6 @@
 <template>
   <div>
     <Header />
-
-    <!-- <Introduction />
-    <RichText />
-    <Carousel view="slides" />
-    <Carousel view="tiles" />
-    <Exercise /> -->
-
     <template v-for="(componentDefinition, index) in page.components">
       <component
         :is="resolveComponent(componentDefinition)"
@@ -25,31 +18,21 @@
 
 <script>
 import Header from "../components/Header";
-import Introduction from "../components/Introduction";
-import RichText from "../components/RichText";
-import Carousel from "../components/Carousel";
-import Exercise from "../components/Exercise";
 
 export default {
   components: {
     Header,
-    Introduction,
-    RichText,
-    Carousel,
-    Exercise,
   },
   asyncData(nuxtContext) {
     // eslint-disable-next-line no-unused-vars
     const { route, params, $contentful, $preview } = nuxtContext;
 
-    return Promise.all([
-      $contentful.getPageBySlug($preview, route.path),
-      $contentful.getEntriesByContentType($preview, "talk"),
-    ]).then((results) => {
-      const page = results[0];
-      const talks = results[1];
-      return { talks, page, slug: route.path };
-    });
+    return Promise.all([$contentful.getPageBySlug($preview, route.path)]).then(
+      (results) => {
+        const page = results[0];
+        return { page, slug: route.path };
+      }
+    );
   },
   mounted() {
     // This is a convenience function to "automatically" evaluate any registered signals
@@ -86,11 +69,6 @@ export default {
           content: `${this.page.title}`,
         },
       ],
-    };
-  },
-  provide() {
-    return {
-      talks: this.talks,
     };
   },
   // https://nuxtjs.org/docs/2.x/components-glossary/pages-watchquery

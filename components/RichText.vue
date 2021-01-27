@@ -20,7 +20,7 @@
               {{ variations[0].fields.title }}
             </h2>
 
-            <ul class="flex">
+            <ul class="flex" v-if="!!variations[0].intentTag.intents.student">
               <li>
                 <svg width="24" height="24" viewBox="0 0 24 24">
                   <g transform="translate(-1020 -367)">
@@ -67,6 +67,53 @@
               </li>
               <li>
                 <nuxt-link to="#" class="cta">Ask anything</nuxt-link>
+              </li>
+            </ul>
+
+            <ul class="flex" v-if="!!variations[0].intentTag.intents.teacher">
+              <li class="mr-4">
+                <span class="font-sans text-lg">80%</span>
+                <svg width="24" height="25" viewBox="0 0 24 25" class="inline">
+                  <g fill="none" fill-rule="evenodd">
+                    <g transform="translate(-498 -3093) translate(498 3092)">
+                      <g>
+                        <path
+                          fill="#282828"
+                          d="M12 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0 9c2.7 0 5.8 1.29 6 2v1H6v-.99c.2-.72 3.3-2.01 6-2.01m0-11C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z"
+                          transform="translate(0 1.745)"
+                        />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+                <span class="font-sans">Read article</span>
+              </li>
+              <li class="mr-4">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <g fill="#282828">
+                    <path
+                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM5.92 19H5v-.92l9.06-9.06.92.92L5.92 19zM20.71 5.63l-2.34-2.34c-.2-.2-.45-.29-.71-.29-.26 0-.51.1-.7.29l-1.83 1.83 3.75 3.75 1.83-1.83c.39-.39.39-1.02 0-1.41z"
+                      transform="translate(-1193 -364) translate(1193 364)"
+                    />
+                    <path
+                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM5.92 19H5v-.92l9.06-9.06.92.92L5.92 19zM20.71 5.63l-2.34-2.34c-.2-.2-.45-.29-.71-.29-.26 0-.51.1-.7.29l-1.83 1.83 3.75 3.75 1.83-1.83c.39-.39.39-1.02 0-1.41z"
+                      transform="translate(-1193 -364) translate(1193 364)"
+                    />
+                  </g>
+                </svg>
+              </li>
+              <li>
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                  <g transform="translate(-1020 -367)">
+                    <g>
+                      <path
+                        fill="#282828"
+                        d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92 0-1.61-1.31-2.92-2.92-2.92zM18 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM6 13c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm12 7.02c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"
+                        transform="translate(1020 367)"
+                      />
+                    </g>
+                  </g>
+                </svg>
               </li>
             </ul>
           </div>
