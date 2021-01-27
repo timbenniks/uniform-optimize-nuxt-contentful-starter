@@ -18,44 +18,33 @@
     </div>
 
     <div class="carousel-wrapper">
-      <carousel-3d
-        :controls-visible="true"
-        :controls-prev-html="`<svg viewBox='0 0 57 57'><g transform='translate(-257 -1172) rotate(90 -429 743)'><circle cx='28.5' cy='28.5' r='28.5' fill='#415AC2'/><g fill='#FFF'><path transform='rotate(-90 28.5 11.5) matrix(-1 0 0 1 24 0)' d='m12 4-1.41 1.41 5.58 5.59h-12.17v2h12.17l-5.58 5.59 1.41 1.41 8-8z'/></g></g></svg>`"
-        :controls-next-html="`<svg viewBox='0 0 57 57'><g transform='translate(-1241 -1172) rotate(-90 1235 -6)'><circle cx='28.5' cy='28.5' r='28.5' fill='#415AC2'/><g fill='#ffffff'><path d='M12 4L10.59 5.41 16.17 11 4 11 4 13 16.17 13 10.59 18.59 12 20 20 12z' transform='rotate(-90 28.5 11.5) matrix(-1 0 0 1 24 0)'/></g></g></svg>`"
-        :controls-width="57"
-        :controls-height="57"
-        :clickable="false"
-        :perspective="0"
-        :space="450"
-        :display="3"
-        :loop="false"
-        :width="478"
-        :height="359"
-        :border="1"
-      >
-        <slide :index="0"
-          ><img
+      <div class="tiles mt-16 w-full grid gap-2 grid-cols-2">
+        <div class="tile mb-4">
+          <img
             src="https://i.twic.pics/v1/cover=1:1/resize=478x359/placeholder:282828"
-        /></slide>
-        <slide :index="1"
-          ><img
+          />
+        </div>
+        <div class="tile mb-4">
+          <img
             src="https://i.twic.pics/v1/cover=1:1/resize=478x359/placeholder:282828"
-        /></slide>
-        <slide :index="2"
-          ><img
+          />
+        </div>
+        <div class="tile mb-4">
+          <img
             src="https://i.twic.pics/v1/cover=1:1/resize=478x359/placeholder:282828"
-        /></slide>
-        <slide :index="3"
-          ><img
+          />
+        </div>
+        <div class="tile mb-4">
+          <img
             src="https://i.twic.pics/v1/cover=1:1/resize=478x359/placeholder:282828"
-        /></slide>
-        <slide :index="4"
-          ><img
+          />
+        </div>
+        <div class="tile mb-4">
+          <img
             src="https://i.twic.pics/v1/cover=1:1/resize=478x359/placeholder:282828"
-        /></slide>
-      </carousel-3d>
-
-      <p class="text-center">Monday protests in Leipzig, 09.10.1989</p>
+          />
+        </div>
+      </div>
 
       <hr class="mt-12 border-grey" />
       <ul class="flex mt-4">
@@ -117,15 +106,3 @@
   grid-template-columns: 1fr 9fr;
 }
 </style>
-
-<script>
-import { Carousel3d, Slide } from "vue-carousel-3d";
-
-export default {
-  name: "Carousel",
-  components: {
-    Carousel3d,
-    Slide,
-  },
-};
-</script>

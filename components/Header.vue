@@ -20,10 +20,8 @@
         The<br />German<br />Untity
       </div>
       <div class="">
-        <nuxt-link to="?utm_type=student" class="cta cta-active"
-          >Student</nuxt-link
-        >
-        <nuxt-link to="?utm_type=teacher" class="cta">Teacher</nuxt-link>
+        <a href="?utm_type=student" class="cta cta-active">Student</a>
+        <a href="?utm_type=teacher" class="cta">Teacher</a>
       </div>
     </div>
   </nav>

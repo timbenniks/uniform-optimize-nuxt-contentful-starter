@@ -1,23 +1,30 @@
-import MainHero from "./Hero";
-import CallToAction from "./CallToAction/CallToAction";
-import PersonalizedHero from "./PersonalizedHero";
-import TalkList from "./TalkList/TalkList";
-import RegisterForm from "./RegisterForm";
-import WhyAttend from "./WhyAttend";
+// import MainHero from "./Hero";
+// import CallToAction from "./CallToAction/CallToAction";
+// import PersonalizedHero from "./PersonalizedHero";
+// import TalkList from "./TalkList/TalkList";
+// import RegisterForm from "./RegisterForm";
+// import WhyAttend from "./WhyAttend";
 
 import Introduction from "../components/Introduction";
 import RichText from "../components/RichText";
 import Carousel from "../components/Carousel";
+import ImageGrid from "../components/ImageGrid";
 import Exercise from "../components/Exercise";
 
 const componentMap = {
-  hero: MainHero,
-  cta: CallToAction,
-  // that's 'personalized hero' to you, sir.
-  "3zPkEj1KqeSn4QdsdnNKO3": PersonalizedHero,
-  talksList: TalkList,
-  registrationForm: RegisterForm,
-  whyAttend: WhyAttend,
+  // hero: MainHero,
+  // cta: CallToAction,
+  // // that's 'personalized hero' to you, sir.
+  // "3zPkEj1KqeSn4QdsdnNKO3": PersonalizedHero,
+  // talksList: TalkList,
+  // registrationForm: RegisterForm,
+  // whyAttend: WhyAttend,
+
+  PersonalizedSchoolHero: Introduction,
+  PersonalizedSchoolRichtext: RichText,
+  PersonalizedSchoolCarousel: Carousel,
+  PersonalizedSchoolImageGrid: ImageGrid,
+  PersonalizedSchoolExcercise: Exercise,
 };
 
 export function componentResolver(variantType) {

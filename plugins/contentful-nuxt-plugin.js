@@ -50,9 +50,9 @@ export default ({ $config }, inject) => {
   const getPageBySlug = (preview, slug) => {
     return getClient(preview)
       .getEntries({
-        //content_type: "schoolPage",
-        content_type: "page",
-        "fields.slug": slug,
+        content_type: "schoolPage",
+        //content_type: "page",
+        "fields.slug": "/school-page-german-unity",
         include: 2,
       })
       .then((entries) => {
