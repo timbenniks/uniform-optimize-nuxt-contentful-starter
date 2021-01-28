@@ -125,7 +125,7 @@
 
           <hr class="mt-8 border-grey mb-6" />
           <ul class="flex mt-4">
-            <li class="flex font-sans font-bold mr-10 -mt-2">
+            <li class="-ml-4 flex font-sans font-bold mr-10 -mt-2">
               <a
                 :href="variations[0].fields.miroBoardUrl"
                 class="cta cta-active"
