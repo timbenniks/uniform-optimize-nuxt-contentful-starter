@@ -53,7 +53,7 @@ export default ({ $config }, inject) => {
         content_type: "schoolPage",
         //content_type: "page",
         "fields.slug": "/school-page-german-unity",
-        include: 2,
+        include: 3,
       })
       .then((entries) => {
         const [first] = entries.items;

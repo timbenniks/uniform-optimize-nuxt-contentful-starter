@@ -20,8 +20,6 @@
         </div>
 
         <div class="carousel-wrapper">
-          <pre>{{ variations[0] }}</pre>
-
           <carousel-3d
             :controls-visible="true"
             :controls-prev-html="`<svg viewBox='0 0 57 57'><g transform='translate(-257 -1172) rotate(90 -429 743)'><circle cx='28.5' cy='28.5' r='28.5' fill='#415AC2'/><g fill='#FFF'><path transform='rotate(-90 28.5 11.5) matrix(-1 0 0 1 24 0)' d='m12 4-1.41 1.41 5.58 5.59h-12.17v2h12.17l-5.58 5.59 1.41 1.41 8-8z'/></g></g></svg>`"
@@ -37,26 +35,11 @@
             :height="359"
             :border="1"
           >
-            <slide :index="0"
-              ><img
-                src="https://i.twic.pics/v1/cover=1:1/resize=478x359/placeholder:282828"
-            /></slide>
-            <slide :index="1"
-              ><img
-                src="https://i.twic.pics/v1/cover=1:1/resize=478x359/placeholder:282828"
-            /></slide>
-            <slide :index="2"
-              ><img
-                src="https://i.twic.pics/v1/cover=1:1/resize=478x359/placeholder:282828"
-            /></slide>
-            <slide :index="3"
-              ><img
-                src="https://i.twic.pics/v1/cover=1:1/resize=478x359/placeholder:282828"
-            /></slide>
-            <slide :index="4"
-              ><img
-                src="https://i.twic.pics/v1/cover=1:1/resize=478x359/placeholder:282828"
-            /></slide>
+            <template v-for="(image, index) in images" >
+              <slide :index="index" v-bind:key="index"
+                ><img :src='image'
+              /></slide>
+            </template>
           </carousel-3d>
 
           <p class="text-center">{{ variations[0].fields.subtitle }}</p>
@@ -156,9 +139,18 @@ export default {
     variations() {
       return contentfulOptimizeListReader(this.fields.unfrmOptP13nList);
     },
-  },
-  mounted() {
-    this.$uniformOptimize.trackBehavior(this.fields.unfrmOptIntentTag);
+    mounted() {
+      this.$uniformOptimize.trackBehavior(this.fields.unfrmOptIntentTag);
+    },
+    images() {
+      let imageArray = [];
+      for (let schoolImageType of this.variations[0]?.fields?.items) {
+        if (schoolImageType.fields?.image?.fields?.file?.url !== undefined) {
+          imageArray.push(schoolImageType.fields?.image?.fields?.file?.url);
+        }
+      }
+      return imageArray;
+    },
   },
 };
 </script>
