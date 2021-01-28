@@ -37,8 +37,9 @@
           >
             <template v-for="(image, index) in images" >
               <slide :index="index" v-bind:key="index"
-                ><img :src='image'
-              /></slide>
+                ><img v-if="image.image !== undefined" :src='image.image'
+                /><span v-else><iframe :src='image.video' width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span
+              ></slide>
             </template>
           </carousel-3d>
 
@@ -146,7 +147,9 @@ export default {
       let imageArray = [];
       for (let schoolImageType of this.variations[0]?.fields?.items) {
         if (schoolImageType.fields?.image?.fields?.file?.url !== undefined) {
-          imageArray.push(schoolImageType.fields?.image?.fields?.file?.url);
+          imageArray.push( {"image": schoolImageType.fields?.image?.fields?.file?.url} );
+        } else {
+          imageArray.push( {"video": schoolImageType.fields?.videoLink} );
         }
       }
       return imageArray;
