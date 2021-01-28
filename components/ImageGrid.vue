@@ -1,6 +1,6 @@
 <template>  
   <personalize :variations="variations">
-    <template v-slot:default="{ variations }">
+    <template>
       <section class="carousel-wrapper w-full grid gap-4 grid-cols-2 mb-24">
         <div class="flex justify-end">
           <svg width="38" height="38" viewBox="0 0 38 38" class="mt-16">
