@@ -30,7 +30,7 @@
             :perspective="0"
             :space="450"
             :display="3"
-            :loop="false"
+            :loop="true"
             :width="478"
             :height="359"
             :border="1"
