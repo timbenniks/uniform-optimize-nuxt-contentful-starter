@@ -95,13 +95,14 @@
           </ul>
 
           <article>
-            {{ variations[0].fields.description }}
+            <template>
+              <div class="excercise-description" v-if="variations[0].fields.description!==undefined" v-html="$md.render(variations[0].fields.description)"></div>
+            </template>
           </article>
 
           <article>
-            <template lang="md">
-              # Test MD
-              {{ variations[0].fields.task }}
+            <template>
+              <div v-html="$md.render(variations[0].fields.task)"></div>
             </template>
           </article>
 
@@ -170,6 +171,10 @@
 .content-wrapper ol {
   list-style-type: upper-alpha;
   list-style-position: inside;
+}
+
+.excercise-description {
+  margin-bottom: 2rem;
 }
 </style>
 

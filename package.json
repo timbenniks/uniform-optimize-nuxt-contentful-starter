@@ -18,6 +18,7 @@
     "@analytics/google-analytics": "^0.5.2",
     "@analytics/segment": "^0.5.0",
     "@contentful/rich-text-html-renderer": "^14.1.2",
+    "@nuxtjs/markdownit": "^2.0.0",
     "@nuxtjs/pwa": "^3.0.2",
     "@uniformdev/optimize-tracker-analytics": "^2.0.0",
     "@uniformdev/optimize-tracker-browser": "^2.0.0",

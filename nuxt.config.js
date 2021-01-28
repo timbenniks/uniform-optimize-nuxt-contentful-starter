@@ -74,6 +74,7 @@ export default {
     "@nuxtjs/pwa",
     "cookie-universal-nuxt",
     "~/modules/uniform/optimize/initialize.js",
+    "@nuxtjs/markdownit",
   ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
@@ -90,5 +91,8 @@ export default {
     routes: ["/", "/school"],
     fallback: true,
     dir: "out",
+  },  
+  markdownit: {
+    runtime: true // Support `$md()`
   },
 };
