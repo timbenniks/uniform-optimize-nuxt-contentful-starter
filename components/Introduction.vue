@@ -4,11 +4,6 @@
       <section class="w-full relative mb-24">
         <h1 class="text-center font-bold">{{ variations[0].fields.title }}</h1>
 
-        <template v-for="variation in variations">
-          <p>quick debug, personalized: {{ personalized }}</p>
-          <pre>{{ variation.intentTag.intents }}</pre>
-        </template>
-
         <div class="hero relative w-full">
           <img
             :src="variations[0].fields.heroImage.fields.file.url"
