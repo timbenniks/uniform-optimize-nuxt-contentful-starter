@@ -32,14 +32,37 @@
             :display="3"
             :loop="true"
             :width="478"
-            :height="359"
+            :height="251"
             :border="1"
           >
-            <template v-for="(image, index) in images" >
-              <slide :index="index" v-bind:key="index"
-                ><img v-if="image.image !== undefined" :src='image.image'
-                /><span v-else><iframe :src='image.video' width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span
-              ></slide>
+            <template v-for="(image, index) in images">
+              <slide :index="index" v-bind:key="index">
+                <div
+                  v-if="image.image !== undefined"
+                  class="carousel-image relative"
+                  v-bind:key="image"
+                >
+                  <img
+                    :src="image.image"
+                    width="16"
+                    height="9"
+                    class="w-full h-full absolute top-0 left-0 object-cover"
+                  />
+                </div>
+
+                <div v-else class="carousel-video relative" v-bind:key="image">
+                  <iframe
+                    class="w-full h-full absolute top-0 left-0 object-cover"
+                    :src="image.video"
+                    width="560"
+                    height="315"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  >
+                  </iframe>
+                </div>
+              </slide>
             </template>
           </carousel-3d>
 
@@ -90,6 +113,12 @@
 .carousel-wrapper {
   grid-template-columns: 1fr 9fr;
 }
+
+.carousel-image,
+.carousel-video {
+  padding-top: 52.56%;
+  height: 0;
+}
 </style>
 
 <script>
@@ -131,9 +160,11 @@ export default {
       let imageArray = [];
       for (let schoolImageType of this.variations[0]?.fields?.items) {
         if (schoolImageType.fields?.image?.fields?.file?.url !== undefined) {
-          imageArray.push( {"image": schoolImageType.fields?.image?.fields?.file?.url} );
+          imageArray.push({
+            image: schoolImageType.fields?.image?.fields?.file?.url,
+          });
         } else {
-          imageArray.push( {"video": schoolImageType.fields?.videoLink} );
+          imageArray.push({ video: schoolImageType.fields?.videoLink });
         }
       }
       return imageArray;

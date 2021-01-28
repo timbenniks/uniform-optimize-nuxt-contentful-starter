@@ -1,7 +1,6 @@
 <template>
   <personalize :variations="variations">
     <template v-slot:default="{ variations }">
-
       <section class="exercise-wrapper w-full grid gap-4 grid-cols-2 mb-24">
         <div class="flex justify-end">
           <svg width="38" height="38" viewBox="0 0 38 38">
@@ -75,28 +74,46 @@
 
           <ul class="tiles mt-16 w-full grid gap-2 grid-cols-2">
             <li class="tile mb-4">
-              <img
-                class="mb-6"
-                :src='variations[0].fields.images[0].fields.image.fields.file.url'
-              />
+              <div class="exercize-image relative" v-bind:key="image">
+                <img
+                  :src="
+                    variations[0].fields.images[0].fields.image.fields.file.url
+                  "
+                  width="10"
+                  height="10"
+                  class="mb-6 w-full h-full absolute top-0 left-0 object-cover"
+                  loading="lazy"
+                />
+              </div>
               <p class="text-sm">
-                {{ variations[0].fields.images[0].fields.subtitle  }}
+                {{ variations[0].fields.images[0].fields.subtitle }}
               </p>
             </li>
             <li class="tile mb-4">
-              <img
-                class="mb-6"
-                :src='variations[0].fields.images[1].fields.image.fields.file.url'
-              />
+              <div class="exercize-image relative" v-bind:key="image">
+                <img
+                  :src="
+                    variations[0].fields.images[1].fields.image.fields.file.url
+                  "
+                  width="10"
+                  height="10"
+                  class="mb-6 w-full h-full absolute top-0 left-0 object-cover"
+                  loading="lazy"
+                />
+              </div>
               <p class="text-sm">
-                {{ variations[0].fields.images[1].fields.subtitle  }}
+                {{ variations[0].fields.images[1].fields.subtitle }}
               </p>
             </li>
           </ul>
 
           <article>
             <template>
-              <div class="excercise-description" v-if="variations[0].fields.description!==undefined" v-html="$md.render(variations[0].fields.description)"></div>
+              <div
+                class="excercise-description"
+                v-if="variations[0].fields.description !== undefined"
+                v-html="$md.render(variations[0].fields.description)"
+              ></div>
             </template>
           </article>
 
@@ -106,11 +123,15 @@
             </template>
           </article>
 
-
           <hr class="mt-8 border-grey mb-6" />
           <ul class="flex mt-4">
             <li class="flex font-sans font-bold mr-10 -mt-2">
-              <a :href='variations[0].fields.miroBoardUrl' class="cta cta-active" target="_blank">Start Session</a>
+              <a
+                :href="variations[0].fields.miroBoardUrl"
+                class="cta cta-active"
+                target="_blank"
+                >Start Session</a
+              >
             </li>
             <li class="flex font-sans font-bold mr-6">
               <svg width="24" height="25" viewBox="0 0 24 25" class="mr-2">
@@ -132,7 +153,10 @@
               <svg width="24" height="24" viewBox="0 0 24 24" class="mr-2">
                 <g fill="none" fill-rule="evenodd">
                   <g transform="translate(-415 -865) translate(415 863)">
-                    <path d="M0 0L24 0 24 24 0 24z" transform="translate(0 2)" />
+                    <path
+                      d="M0 0L24 0 24 24 0 24z"
+                      transform="translate(0 2)"
+                    />
                     <path
                       fill="#000"
                       fill-rule="nonzero"
@@ -156,7 +180,6 @@
     </template>
   </personalize>
 </template>
-  
 
 <style lang="postcss">
 .exercise-wrapper {
@@ -175,6 +198,11 @@
 
 .excercise-description {
   margin-bottom: 2rem;
+}
+
+.exercize-image {
+  padding-top: 72%;
+  height: 0;
 }
 </style>
 

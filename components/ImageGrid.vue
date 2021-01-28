@@ -1,4 +1,4 @@
-<template>  
+<template>
   <personalize :variations="variations">
     <template>
       <section class="carousel-wrapper w-full grid gap-4 grid-cols-2 mb-24">
@@ -19,17 +19,30 @@
           </svg>
         </div>
 
-
         <div class="carousel-wrapper">
           <div class="tiles mt-16 w-full grid gap-2 grid-cols-2">
-            <template v-for="(image) in images">
-              <div class="tile mb-4" v-bind:key="image">
-                
-                <img v-if="image.image !== undefined" :src='image.image' width="560" />
-                <span v-else class="grid-video">
-                  <iframe :src='image.video' width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </span>
-                
+            <template v-for="image in images">
+              <div class="tile grid-image relative" v-bind:key="image">
+                <img
+                  v-if="image.image !== undefined"
+                  :src="image.image"
+                  width="16"
+                  height="9"
+                  class="w-full h-full absolute top-0 left-0 object-cover"
+                  loading="lazy"
+                />
+                <div v-else class="grid-video">
+                  <iframe
+                    :src="image.video"
+                    width="560"
+                    height="315"
+                    frameborder="0"
+                    class="w-full h-full absolute top-0 left-0 object-cover"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    loading="lazy"
+                  ></iframe>
+                </div>
               </div>
             </template>
           </div>
@@ -79,6 +92,12 @@
 .carousel-wrapper {
   grid-template-columns: 1fr 9fr;
 }
+
+.grid-image,
+.grid-videoLink {
+  padding-top: 52.56%;
+  height: 0;
+}
 </style>
 
 <script>
@@ -117,9 +136,11 @@ export default {
       let imageArray = [];
       for (let schoolImageType of this.variations[0]?.fields?.items) {
         if (schoolImageType.fields?.image?.fields?.file?.url !== undefined) {
-          imageArray.push( {"image": schoolImageType.fields?.image?.fields?.file?.url} );
+          imageArray.push({
+            image: schoolImageType.fields?.image?.fields?.file?.url,
+          });
         } else {
-          imageArray.push( {"video": schoolImageType.fields?.videoLink} );
+          imageArray.push({ video: schoolImageType.fields?.videoLink });
         }
       }
       return imageArray;
@@ -127,4 +148,3 @@ export default {
   },
 };
 </script>
-

@@ -1,6 +1,6 @@
 <template>
   <personalize :variations="variations">
-    <template v-slot:default="{ personalized, variations }">
+    <template v-slot:default="{ variations }">
       <section class="w-full relative mb-24">
         <h1 class="text-center font-bold">{{ variations[0].fields.title }}</h1>
 
@@ -9,7 +9,7 @@
             :src="variations[0].fields.heroImage.fields.file.url"
             width="16"
             height="9"
-            class="w-full h-full absolute top-0 left-0 object-cover"
+            class="w-full h-auto absolute top-0 left-0 object-cover"
           />
         </div>
         <div class="absolute intro-arrow">
